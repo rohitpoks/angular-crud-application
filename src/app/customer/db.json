@@ -1,0 +1,64 @@
+{
+  "customers": [
+    {
+      "name": "Rohit Pokhrel",
+      "id": 1,
+      "gender": "Male",
+      "age": "33",
+      "username": "admin",
+      "password": "admin"
+    },
+    {
+      "name": "temp",
+      "id": 2,
+      "gender": "30",
+      "age": "20",
+      "username": "admin2",
+      "password": "admin2"
+    },
+    {
+      "name": "Sparsh",
+      "gender": "Male",
+      "age": "21",
+      "username": "admin3",
+      "password": "admin3",
+      "id": 3
+    },
+    {
+      "name": "Hrithik",
+      "gender": "Male",
+      "age": "30",
+      "username": "admin1",
+      "password": "admin1",
+      "id": 4
+    }
+  ],
+  "products": [
+    {
+      "id": 0,
+      "name": "Apsara Pencil",
+      "price": 30
+    },
+    {
+      "id": 1,
+      "name": "Pen",
+      "price": 15
+    }
+  ],
+  "people": [
+    {
+      "id": 4,
+      "name": "Rohit Pokhrel",
+      "role": "Web Admin",
+      "username": "superadmin",
+      "password": "superadmin"
+    },
+    {
+      "name": "Some Admin",
+      "role": "Some Role",
+      "username": "superadmin1",
+      "password": "superadmin1",
+      "id": 7
+    }
+  ]
+}

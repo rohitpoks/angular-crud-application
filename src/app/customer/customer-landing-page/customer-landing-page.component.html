@@ -1,0 +1,5 @@
+<h1>Welcome, {{current.name}} </h1>
+<button [routerLink]="['/customer/edit', current.id]">Edit my details</button>
+<button [routerLink]="['/customer/details', current.id]">View my details</button>
+<button [routerLink]="['/customer/products']">Products</button>
+<button (click)="logOut()">Sign Out</button>

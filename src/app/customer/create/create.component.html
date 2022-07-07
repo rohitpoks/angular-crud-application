@@ -1,0 +1,38 @@
+<form [formGroup]="registrationForm">
+
+ <div>
+  <label for="name">Name: </label>
+  <input type="text" id="name" formControlName="name">
+  <small *ngIf="name?.touched && name?.invalid">Please enter a name!</small>
+ </div>
+
+ <div>
+  <label for="age">Age: </label>
+  <input type="text" id="age" formControlName="age">
+  <small *ngIf="age?.touched && age?.invalid">Please enter an age!</small>
+ </div>
+
+  <div>
+  <label for="Gender">Gender: </label>
+  <input type="text" id="gender" formControlName="gender">
+  <small *ngIf="gender?.touched && gender?.invalid">Please enter a gender!</small>
+ </div>
+
+
+  <div>
+  <label for="username">Username: </label>
+  <input type="text" id="username" formControlName="username">
+  <small *ngIf="username?.touched && username?.errors?.['duplicate']">Username already exists!</small>
+  <small *ngIf="username?.touched && username?.invalid && !username?.errors?.['duplicate']">Please enter a username!</small>
+ </div>
+
+<div>
+ <label for="password">Password:</label>
+ <input type="text" id="password" formControlName="password">
+ <small *ngIf="password?.touched && password?.invalid">Please enter a password!</small>
+</div>
+
+</form>
+
+<button type="button" routerLink="/">Cancel</button>
+<button type="submit" [disabled]="!registrationForm.valid" (click)="onSubmit(registrationForm.value)" routerLink="">Submit</button>

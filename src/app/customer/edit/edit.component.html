@@ -1,0 +1,25 @@
+<form [formGroup]="registrationForm">
+
+ <div>
+  <label for="name">Name: </label>
+  <input type="text" id="name" formControlName="name">
+  <small *ngIf="name?.touched && name?.invalid">Please enter a name!</small>
+ </div>
+
+ <div>
+  <label for="age">Age: </label>
+  <input type="text" id="age" formControlName="age">
+  <small *ngIf="age?.touched && age?.invalid">Please enter an age!</small>
+ </div>
+
+  <div>
+  <label for="Gender">Gender: </label>
+  <input type="text" id="gender" formControlName="gender">
+  <small *ngIf="gender?.touched && gender?.invalid">Please enter a gender!</small>
+ </div>
+
+
+</form>
+
+<button type="button" [routerLink]="['/customer', editID]">Cancel</button>
+<button type="submit" [disabled]="!registrationForm.valid" (click)="onEdit(registrationForm.value)" [routerLink]="['/customer', editID]">Submit</button>

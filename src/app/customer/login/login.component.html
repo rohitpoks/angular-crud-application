@@ -1,0 +1,17 @@
+<p>Not logged in? Register here! <button type="button" routerLink="/customer/create">Register</button></p>
+
+<form [formGroup]="loginForm">
+ <div>
+  <label for="username">Username:</label>
+<input type="text" id="username" formControlName="username">
+<small *ngIf="username?.invalid && username?.touched">Please enter some username!</small>
+ </div>
+
+ <div>
+  <label for="password">Password:</label>
+  <input type="password" id="password" formControlName="password">
+  <small *ngIf="password?.invalid && password?.touched">Please enter some password!</small>
+ </div>
+</form>
+<button type="button" [disabled]="this.loginForm.invalid" (click)="onSubmit(loginForm.value)">Submit</button>
+<button routerLink="/">Cancel</button>

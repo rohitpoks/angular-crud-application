@@ -1,0 +1,7 @@
+<ul *ngFor="let product of products">
+ <li>Name: {{product.name}}</li>
+ <li>Price: Rs {{product.price}}</li>
+ <li>ID: {{product.id}}</li>
+</ul>
+
+<button type="button" (click)="goBack()">Go Back</button>

@@ -1,0 +1,25 @@
+
+<form [formGroup]="registrationForm">
+
+ <div>
+  <label for="name">Name: </label>
+  <input type="text" id="name" formControlName="name">
+  <small *ngIf="name?.touched && name?.invalid">Please enter a name!</small>
+ </div>
+
+ <!-- <div>
+  <label for="id">ID: </label>
+  <input type="number" id="id" formControlName="id">
+  <small *ngIf="id?.touched && id?.invalid && !id?.errors?.['wrongID']">Please enter an id!</small>
+  <small *ngIf="id?.touched && id?.errors?.['wrongID']">Please enter an ID of {{this.actualID}}!</small>
+ </div> -->
+
+ <div>
+  <label for="role">Role: </label>
+  <input type="text" id="role" formControlName="role">
+  <small *ngIf="role?.touched && role?.invalid">Please enter a role!</small>
+ </div>
+</form>
+
+<button type="button" (click)="goBack()">Cancel</button>
+<button type="submit" [disabled]="!registrationForm.valid" (click)="onSubmit(registrationForm.value)">Submit</button>

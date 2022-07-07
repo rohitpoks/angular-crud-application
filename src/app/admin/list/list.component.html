@@ -1,0 +1,11 @@
+<button routerLink="/admin/create">Create Admin</button>
+<ul>
+ <li *ngFor="let admin of people">{{admin.name}} <button [routerLink]='["/admin/edit/", currentID]' type="button">Edit</button>
+  <button (click)="onClickDel(admin.id)" [routerLink]="['/admin/', currentID]" *ngIf="admin.id != currentID">Delete</button>
+ <button [routerLink]='["/admin/details", currentID]' type="button">Details</button>
+</li>
+
+<button [routerLink]='["/admin/customer"]' type="button">View Customers</button>
+
+ 
+</ul>

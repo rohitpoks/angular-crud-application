@@ -1,0 +1,9 @@
+<button routerLink="create">Create</button>
+<ul>
+ <li *ngFor="let customer of people">
+  {{customer.name}}
+  <button [routerLink]='["edit", customer.id]'>Edit</button>
+  <button [routerLink]="['details', customer.id]">Details</button>
+  <button (click)="onDelete(customer.id)" routerLink="/">Delete</button>
+ </li>
+</ul>
